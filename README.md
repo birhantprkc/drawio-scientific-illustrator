@@ -81,6 +81,8 @@ codex plugin add drawio-scientific-illustrator@drawio-scientific-tools
 3. Mention **Draw.io Scientific Illustrator** or select the plugin in the composer.
 4. State the desired pacing and output formats.
 
+> **Recommended Codex configuration for complex scientific redraws:** choose **GPT-5.6 Sol** and set reasoning effort to **Max**. In Codex settings, enable the six-level reasoning selector first; the default five-level selector does not show the Max option. This setting can increase response time and token use.
+
 Recommended prompt:
 
 ```text
@@ -233,6 +235,8 @@ codex plugin add drawio-scientific-illustrator@drawio-scientific-tools
 2. 上传 PNG、JPEG、SVG，或者从 PDF 渲染出的参考页；
 3. 在输入框选择或提到 **Draw.io Scientific Illustrator**；
 4. 说明绘制步进间隔、画面尺寸和希望导出的格式。
+
+> **复杂科研插图重绘建议的 Codex 设置：**选择 **GPT-5.6 Sol**，并将推理等级设为 **“最高（Max）”**。需要先在 Codex 设置中开启 **6 档推理等级**；默认的 **5 档**选择器不会显示“最高”选项。该设置可能增加响应时间和 token 用量。
 
 推荐提示词：
 
