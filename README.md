@@ -1,10 +1,19 @@
 # Draw.io Scientific Illustrator
 
+> [!IMPORTANT]
+> **项目已迁移 / Project migrated**
+>
+> 本仓库目前继续保持公开访问，暂不归档或删除，但已停止功能与兼容性更新。后续开发、版本发布和问题修复均已迁移至 [**scientific-illustrator**](https://github.com/icebird1998/scientific-illustrator)。建议所有新老用户下载并使用新项目。
+>
+> **推荐下载新项目 / Download the new project:** [项目主页 / Project home](https://github.com/icebird1998/scientific-illustrator) · [最新版本下载 / Latest release](https://github.com/icebird1998/scientific-illustrator/releases/latest)
+>
+> This repository remains publicly accessible and is not being archived or deleted at this time, but it no longer receives feature or compatibility updates. All future development, releases, and fixes have moved to [**scientific-illustrator**](https://github.com/icebird1998/scientific-illustrator). New and existing users are encouraged to download and use the new project.
+
 [中文说明](#中文说明) · [English guide](#english-guide) · [MIT License](LICENSE)
 
 A Codex plugin that lets an AI agent draw scientific figures **live inside the visible draw.io desktop canvas**. You can watch shapes, labels, arrows, styling, and layout appear step by step. The live workflow calls draw.io's own graph API through a localhost-only MCP server; it does not automate the operating-system mouse or keyboard and does not create XML first and merely open it afterward.
 
-> Status: Windows is tested. macOS and Linux executable discovery is included, but live behavior can vary with draw.io/Electron packaging. Reports and pull requests are welcome.
+> Legacy status: this repository remains online for existing users but is no longer updated. Windows was the tested platform for this version. For current development and cross-platform support, use [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator).
 
 ## English guide
 
@@ -33,10 +42,23 @@ The plugin auto-detects common draw.io locations on Windows, macOS, and Linux. F
 Paste this into a Codex task that has terminal access:
 
 ```text
-Install the public Codex plugin from https://github.com/icebird1998/drawio-scientific-illustrator.
-Clone it locally, register its repository root as a Codex marketplace, install
-drawio-scientific-illustrator@drawio-scientific-tools, then tell me when to restart Codex.
+Help me install the Codex plugin associated with
+https://github.com/icebird1998/drawio-scientific-illustrator.
+
+Before cloning, downloading, registering, or installing anything, tell me that active
+development has moved to https://github.com/icebird1998/scientific-illustrator and
+recommend the new project. Ask me to choose exactly one option:
+1. Install scientific-illustrator (recommended; actively maintained).
+2. Continue installing drawio-scientific-illustrator (legacy; no further updates).
+
+Do not perform any installation step until I answer. After I choose, install only the
+selected repository: register its root as a Codex marketplace, then install
+scientific-illustrator@scientific-illustrator-tools for option 1 or
+drawio-scientific-illustrator@drawio-scientific-tools for option 2. Finally tell me
+when to restart Codex.
 ```
+
+> The one-command and manual instructions below intentionally install the legacy plugin and do not ask this question. Use them only after explicitly choosing option 2; otherwise install [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator).
 
 #### Windows one-command installer
 
@@ -132,7 +154,7 @@ $env:DRAWIO_PATH = "D:\Apps\draw.io\draw.io.exe"
 
 ### Update
 
-Run the same installer again. It performs a fast-forward `git pull` and reinstalls the plugin. Restart Codex and start a new task afterward.
+This legacy repository no longer receives updates. Install or update [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator) to receive current features, compatibility improvements, and fixes.
 
 ### Troubleshooting
 
@@ -190,10 +212,21 @@ Draw.io Scientific Illustrator 是一个面向科研插图的 Codex 插件。它
 在一个具备终端权限的 Codex 任务里直接粘贴：
 
 ```text
-请安装这个公开 Codex 插件：https://github.com/icebird1998/drawio-scientific-illustrator。
-把仓库克隆到本地，将仓库根目录注册为 Codex Marketplace，然后安装
-drawio-scientific-illustrator@drawio-scientific-tools。完成后告诉我何时重启 Codex。
+请帮我安装与这个地址关联的 Codex 插件：
+https://github.com/icebird1998/drawio-scientific-illustrator。
+
+在克隆、下载、注册或安装任何内容之前，先告诉我该项目的后续开发已经迁移到
+https://github.com/icebird1998/scientific-illustrator，并推荐使用新项目。然后让我
+明确选择以下一个选项：
+1. 安装 scientific-illustrator（推荐，持续维护）；
+2. 继续安装 drawio-scientific-illustrator（旧版，不再更新）。
+
+在我作出选择之前不要执行任何安装步骤。选择后只安装对应仓库：将仓库根目录注册为
+Codex Marketplace；选项 1 安装 scientific-illustrator@scientific-illustrator-tools，
+选项 2 安装 drawio-scientific-illustrator@drawio-scientific-tools。最后告诉我何时重启 Codex。
 ```
+
+> 下方一键安装和手动安装命令会直接安装旧插件，不会自动询问。只有明确选择选项 2 时才使用；否则请安装 [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator)。
 
 Windows 用户也可以先检查 [`install.ps1`](install.ps1)，然后运行：
 
@@ -275,7 +308,7 @@ $env:DRAWIO_PATH = "D:\Apps\draw.io\draw.io.exe"
 
 ### 更新
 
-再次运行安装脚本即可。脚本会执行安全的快进更新并重新安装插件。随后重启 Codex、新建任务。
+本旧项目不再更新。若要获取最新功能、兼容性改进和问题修复，请安装或更新 [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator)。
 
 ### 常见问题
 
@@ -298,13 +331,13 @@ $env:DRAWIO_PATH = "D:\Apps\draw.io\draw.io.exe"
 
 - 实时工具目前主要面向可编辑的 draw.io 图元。显微照片、热图和复杂数据图可能需要后续增加专门的实时图片插入工具；
 - 最终还原度取决于参考图分辨率，以及内容是否适合用 draw.io 图元表达；
-- v1.0.0 已在 Windows 上测试，macOS/Linux 暂为尽力支持，欢迎提交测试反馈。
+- v1.0.0 已在 Windows 上测试，macOS/Linux 暂为尽力支持；后续兼容性工作请参见 [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator)。
 
 ## Contributing / 参与贡献
 
-Issues and pull requests are welcome. Please include operating system, draw.io version, Codex version, reproduction steps, and relevant MCP error text. Do not upload confidential reference images.
+This legacy repository no longer accepts feature development or compatibility updates. Please open new issues and pull requests in [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator). Do not upload confidential reference images.
 
-欢迎提交 Issue 和 Pull Request。请注明操作系统、draw.io 版本、Codex 版本、复现步骤及相关 MCP 错误；不要上传保密的参考图片。
+本旧项目不再接受功能开发或兼容性更新。新的 Issue 和 Pull Request 请提交到 [scientific-illustrator](https://github.com/icebird1998/scientific-illustrator)。请勿上传保密的参考图片。
 
 ## License
 
